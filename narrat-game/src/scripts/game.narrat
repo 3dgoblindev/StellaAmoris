@@ -1,5 +1,6 @@
 main:
-  set_screen "stars" 
+  set_screen "stars" 0 fade
+
   talk astrea idle "¿Has visto, amor?"
   talk libra idle "¿El qué?"
   talk astrea idle "El cielo"

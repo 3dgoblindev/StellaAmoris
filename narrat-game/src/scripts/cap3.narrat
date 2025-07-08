@@ -29,7 +29,6 @@ cap3_enfadada:
   jump cap3_continua
 
 cap3_continua:
-  play music carmela
   talk alberto idle "Ah, bien. Allí estará seguro. ¿Y su novia? Estaban para casar él y la Carmela"
   talk luisa idle "Lo retrasarán hasta el final de la guerra. Ella ha estado hoy en mi casa. No dejaba de llorar, la pobre"
   talk alberto idle "Qué lástima…"
@@ -87,7 +86,7 @@ cap3_cartas:
 23_abril:
   "23 de abril de 1937"
 
-  "A mi Luisa, "
+  "A mi Luisa: "
   "¿Cómo están tus padres? Espero que Madrid os trate bien."
   "Aquí está siendo complicado. Heridos por todos lados. ¡Pero no te preocupes! Tu Alberto está sano y salvo. No te vas a quedar sin novio tan fácilmente. Mi único consuelo ahora mismo es que cada noche miro las estrellas y me recuerdan que, posiblemente, tú estés viendo las mismas. Prefiero su brillo al de las balas, pero eso creo que todo el mundo. " 
   "He visto el periódico y se me ha iluminado la cara al ver tu nombre en él. La periodista que se iba a mantener en perfil bajo, eh. Si es que… Esa es la Luisa de la que me enamoré."
@@ -214,10 +213,13 @@ cap3_cartas:
 
 grabadora:
   clear_dialog
+  play music carmela
+
   set_screen "negro" 0 fade 1000
-  set_screen "estrallas" 0 fade 1000
+  set_screen "stars" 0 fade 1000
   //poner cancion 
   //poner imagen
+  
   "El ejército del Ebro rumbala rumbala rum-ba-la"
   "El ejército del Ebro rumbala rumbala rum-ba-la"
 

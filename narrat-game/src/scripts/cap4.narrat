@@ -177,6 +177,7 @@ cap4_estrellas:
 mirar_estrellas:
   clear_dialog
   choice:
+    " "
     "*Seguir observando las estrellas*":
       jump mirar_estrellas
     "*Ofrecer un pensamiento aleatorio*":
@@ -199,9 +200,9 @@ cap4_estelar:
   talk alba idle "¿Nos vamos?"
   talk laura idle "Sí, pero… ¿no quieres sacar una última carta?"
   "Tu sonrisa se expande antes de asentir y sacar el tarot."
-  "Laura baraja y deja tres cartas bocabajo."
 
   choice:
+    "Laura baraja y deja tres cartas bocabajo."
     "*Elegir la de la izquierda*":
       jump cap4_estella_carta
     "*Elegir la del medio*":
