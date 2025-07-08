@@ -1,0 +1,140 @@
+
+cap1_inicio:
+  clear_dialog
+  play music cap1
+  
+  set_screen "negro" 0 fade 1000
+  set_screen "edad_media_dia_sin" 0 fade 1000
+  change_player_character lazaro
+  talk aurora idle "¡LÁAAZAROOOOO! ¿Que faces? ¡Tenemos de segar el trigo!"
+  talk lazaro idle "¡Non desesperes, señora mea! Sobiendo estoy el monte"
+  //set_screen "edad_media_dia_1"
+  //cambiar a sprite con lazaro
+  set_screen "edad_media_dia" 0 fade 500
+  talk aurora idle "Tarde es, Lázaro. Mañana terminaremos el trabaxo"
+
+  "Campo de trigo: *Se mueve*"
+  talk lazaro idle "¿Que diz, Aurora?"
+  talk aurora idle "¿Yo? Que mañana terminaremos el…"
+  talk lazaro idle "Non, Aurora. Después"
+
+  "Campo de trigo: *Se mueve sinuosamente*"
+  talk trigo idle "¡Una ayudita, anda!"
+
+  talk aurora idle "¡Lázaro, las plantas parlan!"
+  talk lazaro idle "¡Pardiez! ¿Obra es esta de Dios?"
+  talk trigo idle "Casi, casi, campeón, el jefe está apagado o fuera de cobertura. ¿Me sacáis?"
+  
+  choice:
+    talk aurora idle "¡O del Diablo deve de ser, marido meo! ¿Que facemos? ¡Toma la tua azada y faz algo, Lázaro!"
+    "*Usar la azada para desenterrar el trigo parlante*":
+      jump UsarAzada
+    "*Asustarte y esconderte detrás de Aurora*":
+      jump Esconderse
+
+UsarAzada:
+  talk lazaro idle "¡Diablo o non, aqueste campo mio et del mio tesoro es!"
+  "Tomas la hazada y comienzas a cavar"
+  animate #narrat-app narrat-screenshake
+  jump cap1_demonio
+
+Esconderse:
+  talk aurora idle "¿Lázaro? ¡Que fazes, gañán!"
+  talk lazaro idle "Pavor tengo, paloma mea… ¡Débil soy de ánimos!"
+  talk aurora idle "Fortuna tienes de que te quiera más que la mea vida, Lázaro…"
+  "Aurora toma la azada y comienza a cavar"
+  animate #narrat-app narrat-screenshake
+  jump cap1_demonio
+
+cap1_demonio:
+  set_screen "edad_media_tarde" 0 fade 1000
+  talk marax idle "¡A buenas horas mangas verdes, muchachotes! Poco más y me desentierro solo. ¿Tanto os costaba ayudar al pobre Marax?"
+  talk lazaro idle "Pardiez, Aurora, que al perro salidos cuernos ha"
+  talk aurora idle "Casada fui contigo por bello y amoroso, Lázaro, non por listo, parece ser"
+  talk marax idle "Lo que cuesta entenderos, macho."
+  talk marax idle "Bueno, a lo que iba. Soy Marax, gran conde del infierno. Un placer. Aunque, bueno, desde el incidente de las manzanas, ya no soy ni tan gran ni tan conde"
+
+  choice:
+    " "
+    "¿Manzanas?":
+      talk marax idle "Mira, mi psicólogo dice que no hace falta remover tanto la mierda"
+    "¿Te lo han des-condado del salario?":
+      talk marax idle "Mira, mi psicólogo dice que no hace falta remover tanto la mierda"
+
+  talk marax idle "Pero bueno, ¿me vais a decir vuestros nombres? ¿O vais a seguir siendo Cateto 1 y Cateta 2?"
+  talk aurora idle "¿Usurpar nuestras ánimas vas si decirte nomres nostros?"
+  talk marax idle "Si te digo que no, ¿me creerías?"
+  talk aurora idle "Sí"
+  talk marax idle "Ah, bueno, vale. Pues no me las llevo. Fíjate tú qué cosa"
+  talk aurora idle "Tranquila me quedo, pues"
+  talk lazaro idle "El mio nomre es Lázaro Sánchez y aquesta es la mia esposa. ¡La mugier más bella, más pulcra, más fermosa, más…!"
+  talk marax idle "Que sí, que sí, que lo pillo. Un hombre profundamente enamorado de su mujer"
+  talk marax idle "La cosa es que me habéis sacado de la tierra y yo ahora, si fuese bueno, os debería un favor, pero al infierno no se llega bajo si no se es un poco cabroncete. Así que me toca llevarme vuestras almas, chicos"
+  talk aurora idle "¡Afirmarnos tú que nostras ánimas non ser tuyas!"
+  talk marax idle "Ya, bueno, chochete. Soy el diablo, qué te esperabas"
+  talk lazaro idle "Tomad, vos, don diablo, la mia ánima, non la de la mia Aurora que est la lumne de los mis ojos... Mas sabed vos, que nin preso nin cativo non me dexaré ser, que lucharé con vos"
+  talk marax idle "Mira, me tenéis hasta los círculos del infierno. No me estoy enterando de nada. Esperad un momento"
+
+  clear_dialog
+  set_screen "blanco" 0 fade 500
+  "Una estrella surca los cielos, creando un resplandor."
+  set_screen "edad_media_tarde" 0 fade 2000
+  //transicion con brillo
+  talk aurora idle "¡Por Dios, cuánta luz!"
+
+  choice:
+    " "
+    "¿Aurora, pichoncito mío, estás bien?":
+      jump cap1_demonio2
+    "¡Aurora, luz de mi vida! ¿Te has hecho daño?":
+      jump cap1_demonio2
+    "¡Tápate los ojos, melocotoncito en almíbar!":
+      jump cap1_demonio2
+
+cap1_demonio2:
+  talk aurora idle "No me había dado cuenta de que sonabas tan pasteloso hasta ahora, Lázaro"
+  talk marax idle "Mucho mejor, a comunicarse como personas civilizadas y no como miembros de un régimen feudal"
+  talk marax idle "¿Por dónde íbamos?"
+  talk aurora idle "Decías que nos ibas a quitar nuestras almas o algo así"
+  talk lazaro idle "A mí es que no me viene muy bien ahora mismo"
+  talk aurora idle "Ya, es que tenemos que darle el diezmo pronto al obispo y no tenemos ningún cultivo decente"
+  talk marax idle "(Cada vez más alta la cuota de autónomo, por lo que veo)"
+  choice:
+    talk lazaro idle "A mí se me ocurre una idea, Aurora"
+    "Darle con la azada al diablo.":
+      animate #narrat-app narrat-screenshake
+
+  "Le das con la azada al diablo."
+  wait 1000
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  talk marax idle "¡Auch!"
+  set_screen "edad_media_noche" 0 fade 1000
+
+  "El diablo se retuerce en su jaula"
+
+  talk aurora idle "Bueno, ¿y ahora qué?"
+  talk lazaro idle "Ahora le pedimos un deseo libre de consecuencias"
+  talk marax encerrado "Porfa, porfa, soltadme, porfa, porfa, que no me llevo vuestras almas, lo juro"
+  talk aurora idle "No"
+  talk marax encerrado "¿Porfa plis?"
+  talk lazaro idle "Jolín, que pena me está dando, Aurora"
+  talk aurora idle "Lázaro, céntrate. Y tú, diablo, nos vas a conceder un deseo a cambio de tu libertad, ¿entiendes?"
+  talk marax encerrado "Qué remedio…"
+  talk marax encerrado "Tenéis un deseo, parejita enamorada. Uno solo. Cuando veáis brillar en el cielo una estrella con mucha intensidad, decidlo en voz alta y os será concedido. Tenéis cinco, cuatro…"
+  talk aurora idle "¡Qué pedimos, Lázaro, piensa!"
+  talk marax encerrado "Tres, dos…"
+  talk lazaro idle "¡Ya lo sé!"
+  talk marax encerrado "Uno. ¡Ya!"
+
+  clear_dialog
+  set_screen "blanco" 0 fade 500
+    set_screen "negro" 0 fade 1000
+  talk lazaro idle "Lázaro: Que nuestro amor sea tan eterno como las estrellas"
+  talk marax idle "Un amor eterno, ¿eh? Concedido. Una pena que vuestros cuerpos no lo sean"
+  set_screen "stars" 0 fade 2000
+  wait 3000
+
+  //FIN CAP
+
+  jump cap2

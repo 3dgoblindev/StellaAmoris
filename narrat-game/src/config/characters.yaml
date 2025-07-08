@@ -1,0 +1,101 @@
+---
+config:
+  imagesPath: img/characters/
+  playerCharacter: player
+  gameCharacter: narrat
+characters:
+  narrat:
+    name: ''
+    color: white
+  player:
+    style:
+      color: orange
+    sprites:
+      idle: player.png
+    name: You
+  astrea:
+    style:
+      color: "#f2e82c"
+    name: Astrea
+  libra:
+    style:
+      color: "#59aef0"
+    name: Libra
+  aurora:
+    style:
+      color: "#f2e82c"
+    sprites:
+      idle: aurora.png
+    name: Aurora
+  lazaro:
+    style:
+      color: "#59aef0"
+    sprites:
+      idle: lazaro.png
+    name: Lázaro
+  trigo:
+    style:
+      color: "#e3cf74"
+    name: Trigo (?)
+  marax:
+    style:
+      color: "#bf1000"
+    sprites:
+      idle: marax.png
+      encerrado: marax-encerrado.png
+    name: Marax
+  alonso:
+    style:
+      color: "#f2e82c"
+    sprites:
+      idle: alonso.png
+    name: Alonso
+  luciano:
+    style:
+      color: "#59aef0"
+    sprites:
+      idle: luciano.png
+    name: Luciano
+  alberto:
+    style:
+      color: "#f2e82c"
+    sprites:
+      idle: alberto.png
+    name: Alberto
+  luisa:
+    style:
+      color: "#59aef0"
+    sprites:
+      idle: luisa.png
+    name: Luisa
+  alba:
+    style:
+      color: "#f2e82c"
+    sprites:
+      idle: alba.png
+    name: Alba
+  laura:
+    style:
+      color: "#59aef0"
+    sprites:
+      idle: laura.png
+    name: Laura
+  paloma:
+    style:
+      color: white
+    sprites:
+      idle: paloma.png
+    name: Extraña paloma espacio-temporal
+
+  aluminea:
+    style:
+      color: "#f2e82c"
+    sprites:
+      idle: aluminea.png
+    name: Aluminea
+  litio:
+    style:
+      color: "#59aef0"
+    sprites:
+      idle: litio.png
+    name: Litio

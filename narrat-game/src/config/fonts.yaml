@@ -1,0 +1,55 @@
+allowChoosingFont: true
+fontSets:
+  default:
+    header:
+      name: Libre_Baskerville 
+      fontFamily: '"Libre_Baskerville", serif'
+      files: ['fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf']
+    body:
+      name: Libre_Baskerville 
+      fontFamily: '"Libre_Baskerville", serif'
+      files: ['fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf']
+  custom:
+    header:
+      name: Nerko One
+      fontFamily: '"Nerko One", cursive'
+      files: ['fonts/Nerko_One/NerkoOne-Regular.ttf']
+    body:
+      name: 'Sevillana'
+      fontFamily: '"Sevillana", cursive'
+      files: ['fonts/Sevillana/Sevillana-Regular.ttf']
+  opendyslexic:
+    header:
+      name: 'OpenDyslexic'
+      fontFamily: '"OpenDyslexic", sans-serif'
+      files:
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Regular.woff2'
+          options:
+            weight: 400
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Bold.woff2'
+          options:
+            weight: 700
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Italic.woff2'
+          options:
+            style: italic
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Bold-Italic.woff2'
+          options:
+            weight: 700
+            style: italic
+    body:
+      name: 'OpenDyslexic'
+      fontFamily: '"OpenDyslexic", sans-serif'
+      files:
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Regular.woff2'
+          options:
+            weight: 400
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Bold.woff2'
+          options:
+            weight: 700
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Italic.woff2'
+          options:
+            style: italic
+        - file: 'fonts/OpenDyslexic/OpenDyslexic-Bold-Italic.woff2'
+          options:
+            weight: 700
+            style: italic

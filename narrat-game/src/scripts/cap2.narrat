@@ -1,0 +1,174 @@
+cap2:
+  clear_dialog
+
+  play music cap2
+  set_screen "moderno_dia" 0 fade 2000
+  change_player_character alonso
+  talk alonso idle "Fray Luciano, amigo, ¿no te parecen bonitas las flores?"
+  talk luciano idle "Me haces la misma pregunta que ayer, maestro prior. ¿Es que te ha dado la demencia a tan temprana edad? Las flores no dejan de ser bellas en una noche"
+  talk alonso idle "Que la pregunta sea la misma no significa que la respuesta sea la misma, abad. La flor de ayer a hoy ha podido cambiar, ha podido perder pétalos, caérsele las hojas o sucumbir ante los saltamontes. No son las mismas"
+  talk luciano idle "¿Presocrático estás, Alonso? No sabía yo que te gustaba esa filosofía. ¿Te has enterado de lo que dicen los novicios? Un filósofo francés se está haciendo sonado últimamente"
+
+  choice:
+    " "
+    "¿René Descartes?":
+      jump Descartes
+    "¿Baguetto Baguettes?":
+      jump Baguettes
+    "Yo no me fío de los franceses":
+      jump Franceses
+
+Descartes:
+  talk luciano idle "Ese, ese"
+  jump cap2_pienso
+
+Baguettes:
+  talk luciano idle "Eh… No, pero qué hambre"
+  talk alonso idle "Creo que tu hambre es tan anacrónica como ese pan, amigo Luciano"
+  talk luciano idle "Esta conversación se está descarrilando, Alonso"
+  talk alonso idle "¿De quién hablabas, pues?"
+  talk luciano idle "René Descartes"
+  talk alonso idle "Ah, ese tipo. Sí, me suena"
+  jump cap2_pienso
+
+Franceses:
+  talk alonso idle "En otros tiempos te llamarían afrancesado, Luciano"
+  talk luciano idle "¿Qué otros tiempos?"
+  talk alonso idle "No lo sé, todavía no han llegado"
+  talk luciano idle "Déjate de tiempos y cronologías, Alonso, o te condenarán por hereje. René Descartes te digo"
+  talk alonso idle "Ah, ese. Algo he oído"
+  jump cap2_pienso
+
+cap2_pienso:
+  talk alonso idle "«Pienso, luego existo». ¿Eso decía, no?"
+  talk luciano idle "Qué bien te lo sabes, Alonso. ¿Lo has leído?"
+  talk alonso idle "Algo ha llegado a mis manos, sí. No está mal. Aunque la teoría del diablillo malvado…"
+  talk luciano idle "¿Hombre de fe que no cree en diablos?"
+  talk alonso idle "No digas sandeces ni herejías, Luciano, por amor al Hacedor"
+  talk alonso idle "Claro que creo en el Diablo y en sus secuaces. Solo es que no creo que haya un genio maligno que nos haga dudar de todo. Somos nosotros los que dudamos, Luciano, porque es nuestra naturaleza. Porque Dios nos hizo así, no por un demonio de tres al cuarto"
+  talk luciano idle "¿Es nuestra naturaleza la que te hace preguntarme por las flores?"
+  talk alonso idle "No, es la madre Catalina. Que quiere regalarle flores a vuesa merced por hacernos esta visita. Ayer quería preguntarte cuáles eran tus favoritas, pero la conversación se dispersó a otros lares y…"
+  talk luciano idle "Me culparás por querer conversar contigo, prior. El resto de monjes no consuelan mi alma como vos, Alonso. Palabras vacías tienen los demás"
+  talk alonso idle "No sabes cuánto me halagan tus palabras, amigo Luciano. Vas a hacer que quiera darte yo las flores y no la madre Catalina"
+  talk luciano idle "Qué cosas dices, amigo Alonso…"
+  ///Se escucha un suspiro (si se puede), y con un parpadeo negro se pasa al atardecer///
+  wait 1000
+  set_screen "negro" 0 fade 2000
+  set_screen "moderno_tarde" 0 fade 2000
+
+  talk luciano idle "«Pienso, luego existo»"
+  talk alonso idle "¿Otra vez con el francés, abad? ¿No te gusta Tomás de Aquino ni Erasmo?"
+  talk luciano idle "Estás un poco anticuado, Alonso"
+  talk alonso idle "«Pienso, luego existo». Yo pienso en lo hermosas que se verán esta noche las estrellas y, como pienso, existo."
+
+  jump Pensar:
+
+Pensar:
+  choice:
+    talk luciano idle "Y tú, Alonso, ¿en qué piensas?"
+    "*Pensar en silencio*":
+      clear_dialog
+      wait 1000
+      jump Pensar
+    "*Cerrar los ojos y tumbarse en el pasto*":
+      jump cap2_tumbarse
+
+cap2_tumbarse:
+  set_screen "negro" 0 fade 1000
+  set_screen "moderno_tarde" 0 fade 2000
+
+  choice:
+    " "
+    "En que quiero ver las estrellas contigo cada noche":
+      jump Estrellas:
+    "En que ojalá vinieses a visitarme todos los días":
+      jump Visitarme:
+    "En ideas que no puedo enunciar sin que peligre nuestra amistad":
+      jump AmistadGei:
+
+Estrellas:
+  talk luciano idle "Eso… Creo que eso me gustaría"
+  talk alonso idle "Si pidieses el traslado de tu abadía a la mía…"
+  talk luciano idle "Sabes que eso es imposible, Alonso, ya lo hemos hablado. Soy abad y si viniese aquí…"
+  talk alonso idle "La gente hablaría. Lo sé. Lo entiendo"
+  talk luciano idle "Yo me contento con la esperanza de volver a vernos"
+  jump cap2_noche
+
+Visitarme:
+  talk luciano idle "Sí, hombre, para que se me quede el pandero plano de tanto caballo"
+  talk alonso idle "Tampoco es que ahora lo tengas muy diferente"
+  talk luciano idle "Alonso, por favor, no me mires mucho, que soy de ano tímido"
+  talk alonso idle "Mi vista se fijará en las estrellas, entonces"
+  talk luciano idle "Agradecido con el de arriba"
+  jump cap2_noche
+
+AmistadGei:
+  talk luciano idle "…"
+  wait 1000
+  talk alonso idle "…"
+  wait 1000
+  talk luciano idle "No hacen falta palabras para los oídos entendidos, Alonso"
+  talk alonso idle "¿Me juzgarías?"
+  talk luciano idle "Nunca. Que nos juzguen Dios y las estrellas si alguien tiene que hacerlo"
+  jump cap2_noche
+
+cap2_noche:
+  set_screen "negro" 0 fade 2000
+  set_screen "moderno_noche" 0 fade 2000
+  talk luciano idle "¿Y aquella?"
+  "Luciano señala una constelación del firmamento."
+  talk alonso idle "Virgo"
+  talk luciano idle "¿Qué cuentan de ella?"
+  talk alonso idle "La doncella, la justicia. Era una inmortal que vivía con los hombres, pero cuando estos decidieron dejarse llevar por los males, provocando injusticias, se desterró a sí misma al firmamento"
+  talk luciano idle "Vaya, mujer con carácter"
+  talk alonso idle "De ideales firmes, diría yo"
+  choice:
+    talk luciano idle "¿Y esa de allí?"
+    "Orion":
+      jump Orion
+    "La Lira":
+      jump Lira
+
+Orion:
+  talk alonso idle "Orión tiene varias historias. Mi favorita es la que dice que la diosa Artemisa se enamoró de Orión. Al ser una de las diosas vírgenes, para proteger el voto de castidad de su hermana, Apolo decidió engañarla"
+  talk alonso idle "«¡A que no eres capaz de acertarle a aquel punto lejano en el bosque!», le dijo el dios solar"
+  talk luciano idle "¿Y ella aceptó?"
+  talk alonso idle "Y tanto que lo hizo"
+  talk alonso idle "Pero, al acudir a ver al animal que había sido presa de sus flechas, no vio a otro que a su amado Orión. Entre lágrimas, la diosa decidió subir a Orión entre las estrellas"
+  jump cap2_noche2
+
+Lira:
+  talk alonso idle "La Lira es eso, una lira, un instrumento. Se dice que el dios Hermes la creó y se la dio al dios Apolo. Este, a su vez, se la ofreció a Orfeo, hijo de la musa Calíope"
+  talk luciano idle "Orfeo me suena. ¿Su mujer era Eurídice?"
+  talk alonso idle "Efectivamente"
+  talk alonso idle "Cuando Eurídice murió, Orfeo bajó con su lira al Inframundo a rescatarla. Con su música conmovió hasta a las piedras, pero quedaba un desafío: convencer al mismísimo Hades de que le dejase llevarse a su amada"
+  talk luciano idle "¿Y lo consiguió?"
+  talk alonso idle "Así es. Orfeo conmovió a Perséfone, reina del Inframundo, y esta convenció a su marido de liberarla con una condición. Orfeo no debía mirarla hasta que los dos hubiesen salido del Inframundo"
+  talk luciano idle "Empresa fácil. ¿Vivieron felices para siempre?"
+  talk alonso idle "Eh… No. Orfeo se dio la vuelta justo al final y el alma de Eurídice volvió a los Infiernos"
+  talk luciano idle "¿Qué? ¿Pero por qué hizo eso?"
+  talk alonso idle "Él pensaba que ya habían llegado y… bueno, supongo que no pudo contener las ganas de volver a ver a su amada"
+  talk luciano idle "Creo que lo entiendo"
+  jump cap2_noche2
+
+cap2_noche2:  
+  talk luciano idle "Pero vaya historia más triste…"
+  talk alonso idle "Siempre hay tiempo para crear más historias felices, abad"
+  talk luciano idle "¿Crees que nosotros podremos?"
+  talk alonso idle "Mientras sigan brillando las estrellas, podremos"
+  talk luciano idle "…"
+  talk luciano idle "Los jacintos"
+  talk alonso idle "¿Eh?"
+  talk luciano idle "Que mi flor favorita son los jacintos"
+  talk alonso idle "Ah… Me aseguraré entonces de plantar jacintos para que florezcan cuando vuelvas, no te preocupes"
+
+  clear_dialog
+  set_screen "negro" 0 fade 2000
+  "Años después, el abad Luciano de Tormes falleció de altas fiebres. El prior Alonso de la Vega lo siguió pocos meses después. Algunos dicen que murió de pena. Ambos fueron enterrados en el mismo nicho y los jacintos crecieron sobre la tierra que les daba descanso."
+  "Los historiadores dijeron que eran muy buenos amigos."
+  set_screen "stars" 0 fade 2000
+  wait 3000
+  
+  jump cap3
+
+

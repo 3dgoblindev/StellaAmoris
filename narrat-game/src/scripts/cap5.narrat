@@ -1,0 +1,169 @@
+cap5_inicio:
+  clear_dialog
+  play music cap5
+
+  set_screen "futuro_dia" 0 fade 2000
+  change_player_character litio
+
+  talk litio idle "¡Aluminea, llegas tarde!"
+  talk aluminea idle "Perdona, flor de cromo mía, había mucho tráfico desde la carretera de Marte hasta aquí y… bueno, ya sabes, horas extra"
+  talk litio idle "Otra vez con las horas extra…"
+  talk aluminea idle "Ya, lo sé. No es algo que me encante. En Marte la jornada laboral no está tan regulada como en Mercurio"
+  talk litio idle "El emperador debería olvidarse ya de la Revuelta de Tharsis. Os sigue teniendo con la mano al cuello y el pico en la mano para evitar que vuelvan los levantamientos por qué, ¿por una revuelta de hace treinta años?"
+  talk aluminea idle "No es algo que me encante, pero es lo que hay"
+  talk litio idle "¡Pues no me parece bien que te resignes!"
+  talk aluminea idle "Ya, pero ¿qué puedo hacer yo sola, Litio? Solo soy una simple minera de basalto"
+  talk litio idle "Pero si os juntaseis muchos…"
+  choice:
+    talk aluminea idle "¿Te gustaría otra revuelta?"
+    "Me asusta otra revuelta":
+      jump susto
+    "Necesitamos otra revuelta":
+      jump necesidad
+ 
+susto:
+  talk aluminea idle "¿Entonces?"
+  talk litio idle "Que me asuste no significa que no sea consciente de que sería lo mejor para nosotros"
+  talk aluminea idle "¿Cambiaría una revuelta mucho?"
+  talk litio idle "Una rebelión podría llevar a otra. Esa se expandiría por múltiples lugares hasta acabar con el Imperio"
+  talk aluminea idle "¿Y después de eso qué pasaría?"
+  talk litio idle "Que podríamos casarnos"
+  talk aluminea idle "Oh"
+  jump cap5_revolucion
+
+necesidad:
+  talk aluminea idle "Habría muchas muertes"
+  talk litio idle "Pero ¿y si saliese bien? No tendríamos que venir a un viejo planeta muerto a vernos a escondidas. No nos elegirían los trabajos ni las parejas ni nuestros sueños. Seríamos libres para hacer lo que quisiéramos y para hacerlo juntos, Aluminea"
+  talk aluminea idle "La verdad es que suena agradable. Me gusta nuestro árbol y nuestras estrellas, pero es verdad que ojalá poder recostarnos en nuestra cama y no en placas de metal mientras vigilamos que no nos vea nadie"   
+  jump cap5_revolucion
+
+cap5_revolucion:
+  talk litio idle "En fin, uno puede soñar con la revolución de las masas, supongo"
+  talk aluminea idle "Así eres tú, mi querido y guapo revolucionario. Y así te quiero, no te voy a mentir"
+  talk aluminea idle "Aun así, con como están las cosas, creo que sería más fácil que estallasen todos los planetas en cadena a que se diese un cambio tan grande en tan poco tiempo"
+
+  "Abres la boca para contestar, pero la tienes que cerrar de golpe ante el sonido de una sirena."
+  "Es la policía espacial, la CERDA (Cuerpo Especial de Reforma y Disolución de Agitadores)."
+  "La cosa no pinta bien."
+
+  talk litio idle "¡Corre, Aluminea! ¡Escóndete!"
+
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "futuro_tarde" 0 fade 1000
+
+  talk litio idle "Por fin se han ido"
+  talk aluminea idle "Esos cabrones de la CERDA…"
+  talk litio idle "El nombre les queda que ni pintado, vaya"
+  talk aluminea idle "Si el último día que nos vamos a ver llegamos a entrar en la cárcel, creo que me echaría a llorar tanto que regeneraría los ríos de Marte"
+  talk litio idle "Tenías que decirlo, ¿eh?"
+  talk aluminea idle "Llevas semanas evitando el tema, Litio"
+  talk litio idle "Bueno, quizás porque quería disfrutar de mis últimos momentos contigo sin pensar en ello, Aluminea"
+  talk aluminea idle "No sabía que ignorando el hecho de que te ibas a casar con otra MAÑANA desaparecía el problema"
+  talk litio idle "¡Lo dices como si quisiera hacerlo y no fuese por orden de las alcahuetas!"
+
+  "Ves a Aluminea estar a punto de decir algo, pero se detiene en el último segundo y decide, en su lugar, tomar aire."
+
+  talk aluminea idle "Yo no he dicho eso. Sé que no quieres, pero es difícil saber que no nos vamos a poder ver más y que ni siquiera lo hemos podido hablar"
+
+  choice
+    " "
+    "Lo siento, no quería hacerte daño":
+      jump cap5_despedida
+    "Sentía que si no lo decía no iba a ser real":
+      jump cap5_despedida
+
+cap5_despedida:
+  talk aluminea idle "Lo sé. Lo entiendo. Disculpa. Cuando me ocurrió a mí también fue difícil"
+  talk litio idle "Pero tú tuviste suerte"
+  talk aluminea idle "A ver, suerte lo que se dice suerte… Te recuerdo que me casé con alguien a quien no quería y que decidió escapar después de la ceremonia"
+  talk litio idle "¿Ves? Suerte. Pensión de viudedad al canto"
+  talk aluminea idle "Ya no dan de eso, amor. Y creo que no compensa por ver a la CERDA matar a tu supuesto marido el día de tu boda encima del césped artificial que te ha costado un pastizal financiar en Marte"
+  talk litio idle "Ya, bueno, vale. Quizás no es tampoco la mejor opción, no"
+
+  "Tu intercomunicador suena, recordándote que debes volver a lo que llamas «casa» para terminar los preparativos de la boda. Aluminea se queda muy callada"
+
+  talk litio idle "Supongo que esto es un adiós, Aluminea"
+  talk aluminea idle "Intentaré manifestar que se vuelva un simple «hasta luego», Litio"
+  talk litio idle "Te quiero"
+  talk aluminea idle "Te quiero"
+
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "futuro_noche" 0 fade 1000
+
+  talk litio idle "¡Agáchate, agáchate vaya que nos alcancen y nos vean!"
+  talk aluminea idle "¡Hago lo que puedo!"
+  talk litio idle "A quién se le ocurre no echar el suficiente magnesio al motor de la nave…"
+  talk aluminea idle "¡A quién se le ocurre escaparse el día de su boda sin avisar!"
+  talk litio idle "¡Era más romántico!"
+
+  "Ves a Aluminea suspirar. De pronto, se escuchan sirenas, pero os escondéis y los vehículos pasan de largo."
+
+  talk litio idle "Vale, estamos seguros, por el momento, claro está. Necesitamos recargar la nave para poder salir pitando de aquí."
+  talk aluminea idle "¿Qué podemos usar como combustible?"
+
+  choice:
+    " "
+    "¿Una plancha de metal de los escombros?":
+      jump cap5_combustible
+    "¿Un par de rocas a ver si hay suerte?":
+      jump cap5_combustible
+
+cap5_combustible:
+  talk aluminea idle "No creo que sea suficiente material para poder viajar todo lo rápido que necesitamos…"
+  talk litio idle "¿Qué hacemos entonces?"
+  talk aluminea idle "Se me ocurre…"
+  talk litio idle "¿El qué? ¡Vamos, di, Aluminea!"
+  talk aluminea idle "No te va a gustar, pero creo que es nuestra última opción"
+
+  "Aluminea cabecea hacia el árbol recubierto de metal. Ese árbol ha sido vuestro refugio durante años. Bajo sus hojas inertes habéis perdido la cuenta de las estrellas y de los besos. Un nudo en el pecho se te forma al pensar en acabar con él."
+
+  talk litio idle "Pero… Es nuestro árbol, Aluminea. Llevará siglos aquí, siendo testigo del amor de la gente. ¡A saber cuántas parejas como nosotros se han visto bajo su sombra!"
+
+  talk aluminea idle "Y ahora podría salvar a una de ellas"
+
+  talk litio idle "Lo sé, pero…"
+
+  talk aluminea idle "Plantaremos un nuevo árbol en nuestro nuevo hogar, así las futuras generaciones podrán disfrutar de otro árbol y otro monte"
+
+  "Asientes con la cabeza y Aluminea saca las herramientas para picar el metal del árbol"
+
+  choice:
+    " "
+    "*Hacerlo tú*":
+      jump tu
+    "*Dejar a Aluminea que lo haga*":
+      jump ella
+    "*Hacerlo juntos*":
+      jump juntos
+    
+tu:
+  "Tomas el pico entre tus manos y te pones en posición. A medida que extraes el metal, tus ojos dejan caer su cristal líquido. Te prometiste no llorar el día de tu boda, pero quizás no pase nada por romper una pequeña promesa."
+  jump fin_cap5
+
+ella:
+  "Aluminea te mira y te lanza un beso. Levanta el pico y lo deja caer con fuerza en repetidas ocasiones. Te das cuenta de que está intentando contener las lágrimas, pero no lo consigue."
+  jump fin_cap5
+
+juntos:
+  "Agarráis distintas herramientas y os ponéis a trabajar los dos a la vez. No es lo más eficiente, pero lográis vuestro objetivo mientras os susurráis palabras de cariño. Sabes que con él serías capaz de talar hasta las raíces del Imperio."
+  jump fin_cap5
+
+fin_cap5:
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "futuro_noche_sin" 0 fade 1000
+  talk aluminea idle "¡Listo! Tanque recargado. ¡Arriba, arriba, arriba!"
+  "Os metéis dentro y Aluminea arranca. Al segundo os encontráis abandonando vuestro prado, ahora sin un árbol que lo custodie. Las estrellas os rodean."
+  talk aluminea idle "Rumbo a una vida mejor, Litio"
+
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "stars" 0 fade 1000
+
+  talk litio idle "«Per aspera ad astra»"
+
+  jump fin
+
+

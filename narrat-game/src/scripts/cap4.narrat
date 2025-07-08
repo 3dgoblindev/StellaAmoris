@@ -1,0 +1,228 @@
+cap4_inicio:
+  clear_dialog
+  play music cap4
+
+  set_screen "2010_dia" 0 fade 1000
+  change_player_character alba
+  talk laura idle "A ver, a ver, Alba, frena, que no te entiendo"
+  talk alba idle "Que no, que me escuches, jolín. Mira. Que aquí te ha salido la emperatriz y…"
+  talk laura idle "Eso qué significa, que soy una reina, verdad"
+  talk alba idle "No"
+  talk laura idle "Discutible"
+  choice:
+    " "
+    "*Mirar fijamente a Laura hasta que sea incómodo*":
+      jump emperatriz
+    "¿Me dejas que te lo explique y ya luego replicas?":
+      jump emperatriz
+
+emperatriz:
+  talk laura idle "Perdón, adelante"
+  talk alba idle "Te ha salido la emperatriz, DEL REVÉS. Por lo que significa infelicidad, infertilidad…"
+  talk laura idle "¿Y no le puedes dar la vuelta pal otro lao’?"
+  talk alba idle "No"
+  talk laura idle "Y…"
+  talk alba idle "¡Que no!"
+  talk laura idle "Vale, sigue"
+  talk alba idle "La carta simboliza la infertilidad, la infelicidad, la ansiedad Y el amor agobiante…"
+  talk laura idle "Pues no sabría yo qué decirte"
+  talk alba idle "Vale, pero ¿tú me quieres?"
+  talk laura idle "¿Perdón?"
+  talk alba idle "Que si me quieres"
+  talk laura idle "¿Es una pregunta trampa?"
+  talk alba idle "¡Responde!"
+  talk laura idle "¡Que sí, que sí! No me muerdas, por Dios, chiquilla, que no me va eso"
+  talk laura idle "Te sigo queriendo como el primer día. ¿Contenta?" //¿Opciones aqui?
+  talk alba idle "Puede ser. ¿Pero y la carta? ¿Por qué eres infeliz?"
+  talk laura idle "Y, dale, dramática, que no soy infeliz"
+  talk laura idle "Si tampoco me ha pasado mucho últimamente. Ayer me levanté a las 10, me fui al Breska, me despidieron del trabajo, me fui a almorzar con mi prima, chismeé con las nenas…"
+  talk alba idle "¿Perdón? Recapitula"
+  talk laura idle "Me levanté a las 10, me fui al Breska, me despidieron del trabajo…"
+  talk alba idle "¡Stop! Ahí. Quieta. ¿Cómo que te han despedido? ¿Por qué?"
+  talk laura idle "¡Ah, eso! Nada, nada, sin importancia. Mira es que yo entro a trabajar a las 9 en el Carrefú y, claro, entre una cosa y otra, pues a lo mejor se me pasó un poquitín la hora y entré a las 12"
+  talk alba idle "¿A las 12?"
+  talk laura idle "3 días seguidos"
+  talk alba idle "¿3 días seguidos?"
+  talk laura idle "Y el lunes se me olvidó ir"
+  talk alba idle "Por Skrillex bendito…"
+  talk laura idle "Bueno, pero no es para tanto. Ya me saldrá otra cosa"
+  talk alba idle "Estoy saliendo con una nini… Laura, espabila"
+
+  choice:
+    talk laura idle "Bueno, pero no es para tanto. Ya me saldrá otra cosa"
+
+    "Estoy saliendo con una nini":
+      talk laura idle "Oye, que yo me saqué la ESO…"
+      jump suspiro
+    "Laura, espabila":
+      talk laura idle "Que no te preocupes, mujer. Que ya verás que me saldrá algo"
+      jump suspiro
+  
+suspiro:
+  talk laura idle "Que no te preocupes, mujer. Que ya verás que me saldrá algo"
+  talk alba idle "*Suspira*"
+  talk laura idle "¡Venga, anima esa cara! ¡Que en dos semanas hacemos 4 años juntas! Eso es como una eternidad, ¿no?"
+  talk alba idle "Casi, casi"
+  talk laura idle "¿Te has traído lo que te dije?"
+  "Sacas un portátil lleno de pegatinas de calaveras y rosas."
+  talk laura idle "Objetivo: ¡Pisito de enamoradas!"
+
+  set_screen "negro" 0 fade 2000
+  set_screen "2010_tarde" 0 fade 2000
+
+  talk laura idle "A ver, recopilemos. Tenemos:"
+  talk laura idle "Piso en el barrio Nava-jazo enelesto mago. 1 habitación, 1 baño, cocina sin fogones (el microondas parece que funciona), 730 €"
+  talk laura idle "Piso en las acogedoras afueras, al lado de un basurero maloliente, 2 habitaciones, medio baño, 690 €"
+  talk laura idle "Piso en el barrio General Fascista Fascistez, 1 habitación, cocina de gas, 9º sin ascensor, 700 €"
+
+  choice:
+    " "
+    "No te olvides de: Acogedor piso de 21 metros cuadrados sin ventanas ni baño (tiene un bar al lado que te deja cagar con consumición), suele tener fugas de gas, 900 €":
+      jump chinches 
+    "Piso con los muebles de la abuela del propietario, el casero tiene derecho a dormir en el sofá cuando quiera, 1 baño, colchón inflable en el suelo, 666 € (fantasma de la abuela incluido)":
+      jump warren:
+
+chinches:
+  talk laura idle "Mi parte favorita de ese era la posible plaga de chinches. ¡Ruleta rusa, nunca sabes dónde te picarán!"
+  jump cerrar_pt
+
+warren:
+  talk laura idle "Piénsalo, Alba, podríamos ser las nuevas Warren. ¡Seríamos famosas!"
+  talk alba idle "No quiero que un fantasma octogenario me vea en tetas"
+  talk laura idle "🫦🫦🫦 *Emojis de morderse el labio*"
+  talk alba idle "Laura, no"
+  talk laura idle "Jo"
+  jump cerrar_pt
+
+
+cerrar_pt:
+  "Cierras el portátil de golpe"
+  clear_dialog //lo dejo?
+
+  talk laura idle "¿Cómo puede ser que esté todo tan caro? Así no nos vamos a poder ir a vivir juntas nunca"
+  talk alba idle "Pfff, con suerte en un tiempo estarán los alquileres más baratos"
+  talk paloma idle "Ya te gustaría, bonita. Digo, «ruuuu, ruuuu»"
+  talk laura idle "Jolín"
+  talk alba idle "Me he agobiado. ¡Vamos a preguntarle a las cartas!"
+
+  set_screen "negro" 0 fade 2000
+  set_screen "2010_noche" 0 fade 2000
+  clear_dialog
+
+  talk alba idle "Te lo juro, Laura, última tirada esta vez"
+  talk laura idle "Cielo, le has preguntado ya once veces…"
+  talk alba idle "¡Pero no lo entiendes, esta es la verdadera! Venga, elige un montón, rápido. Vamos a sacar una única carta"
+  talk laura idle "Vale, izquierda"
+  talk alba idle "Perfecto. Ahora coloco estas tres cartas bocabajo y…"
+
+  choice:
+    "*Elegir la de la izquierda*":
+      jump cap4_carta_enamorados
+    "*Elegir la del medio*":
+      jump cap4_carta_muerte
+    "*Elegir la de la derecha*":
+      jump cap4_carta_mago
+
+
+cap4_carta_enamorados:
+  "La carta de los enamorados te saluda."
+  talk laura idle "Están en pelotas. Cochinos"
+  talk alba idle "Céntrate. Los enamorados, eh"
+  talk laura idle "Sí somos"
+  talk alba idle "Amor, gozo, confianza…"
+  talk laura idle "¡Que bonito!"
+  talk alba idle "¿Ves como teníamos que tirar otra vez?"
+  jump cap4_estrellas
+
+cap4_carta_muerte:
+  "Una calavera te devuelve la mirada. La carta de la muerte te observa."
+  talk laura idle "¡Skinny legend!"
+  talk alba idle "Laura por dios"
+  talk laura idle "Perdón, este tío feo quién es"
+  talk alba idle "La muerte"
+  talk laura idle "¡Soy muy guapa para morir!"
+  talk alba idle "Nadie se va a morir aquí"
+  talk alba idle "A ver, la muerte simboliza cambio, fin de etapa, falta de toma de decisiones…"
+  talk laura idle "Ah, mira, pues ni tan mal"
+  talk alba idle "Crisis financiera o amorosa"
+  talk laura idle "Si me dejas, me raparé al cero, lloraré y te daré mucha penita"
+  talk alba idle "Pues vaya mierda de tirada"
+  jump cap4_estrellas
+
+cap4_carta_mago:
+  "Una figura de toga roja alza una vela hacia ti. El mago te ofrece su luz."
+  talk laura idle "Hostia, un twink"
+  talk alba idle "Ya te gustaría"
+  talk laura idle "Qué te susurra el twink. Si es un verde, no se lo aceptes"
+  talk alba idle "El mago simboliza un nuevo comienzo, profundidad en el amor y posibilidades económicas"
+  talk laura idle "Que me abra un canal de yutús y me haga rica, dice"
+  talk alba idle "Yo con que nos dé para la entrada del piso…"
+  talk alba idle "Pero, oye, bastante bien esta tirada"
+  jump cap4_estrellas
+  
+cap4_estrellas:
+  talk laura idle "Hala, Alba, se nos ha hecho de noche. ¿Nos quedamos un ratito y miramos las estrellas?"
+  "Asientes y las os recostáis en el césped. Las estrellas parecen brillar para vosotras."
+  "Laura saca su teléfono móvil."
+  talk laura idle "Mira, amor, nosotras"
+  "Laura te enseña un meme de dos aliens chiquitos mirando las estrellas en una colina."
+  //Imagen de los aliens mirando las estrellas//
+  talk alba idle "Pfff, sí somos"
+  talk laura idle "Oye"
+  talk alba idle "Dime"
+  talk laura idle "Yo creo que nos va a ir bien. En cuanto encuentre otro trabajo seguro que nos saldrá alguna buena oferta de piso y podremos irnos juntas"
+  talk alba idle "Ojalá…"
+  jump mirar_estrellas
+
+mirar_estrellas:
+  clear_dialog
+  choice:
+    "*Seguir observando las estrellas*":
+      jump mirar_estrellas
+    "*Ofrecer un pensamiento aleatorio*":
+      jump cap4_estelar
+
+cap4_estelar:
+  talk alba idle "¿Sabías que, técnicamente, venimos de las estrellas?"
+  talk laura idle "¿Eh?"
+  talk alba idle "Eso, que venimos de las estrellas. El universo se fue formando gracias al nacimiento y la muerte de las estrellas. Por eso Carl Sagan dijo ‘Somos polvo de estrellas’"
+  talk laura idle "…"
+  talk laura idle "Para polvo estelar el que te echaba yo"
+  talk alba idle "*Suspiro*"
+  talk alba idle "Eres insoportable"
+  talk laura idle "Je, pero te ha hecho gracia, a que sí"
+  talk alba idle "…"
+  talk alba idle "Puede ser"
+  talk laura idle "Je, je"
+  "Dejáis que por unos segundos se instaure el silencio mientras veis el firmamento."
+  "Poco despés, os levantáis."
+  talk alba idle "¿Nos vamos?"
+  talk laura idle "Sí, pero… ¿no quieres sacar una última carta?"
+  "Tu sonrisa se expande antes de asentir y sacar el tarot."
+  "Laura baraja y deja tres cartas bocabajo."
+
+  choice:
+    "*Elegir la de la izquierda*":
+      jump cap4_estella_carta
+    "*Elegir la del medio*":
+      jump cap4_estella_carta
+    "*Elegir la de la derecha*":
+      jump cap4_estella_carta
+    "*Dejar que elija Laura*":
+      "Laura te mira y te sonríe, agradecida por la oportunidad; después, toma la del centro."
+      jump cap4_estella_carta
+
+cap4_estella_carta:
+  clear_dialog
+  "Una mujer desnuda recoge agua frente a ti. La carta de la estrella te ofrece un sorbo de su sabiduría."
+  set_screen "negro" 0 fade 1000
+  set_screen "stars" 0 fade 1000
+  talk alba idle "La carta de la estrella"
+  talk laura idle "¿Y qué simboliza?"
+  talk alba idle "La esperanza"
+    
+  set_screen "negro" 0 fade 1000
+
+  jump cap5_inicio
+
+

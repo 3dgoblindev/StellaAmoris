@@ -1,0 +1,12 @@
+fin:
+  clear_dialog
+  set_screen "stars" 0 fade 2000
+
+  talk libra idle "Qué pena me dio lo del árbol. Nos había acompañado tanto tiempo…"
+  talk astrea idle "A mí también me lo dio, pero nos garantizó una buena vida. No me arrepiento de nada"
+  talk libra idle "Yo tampoco, querida"
+  talk astrea idle "¿Y ahora qué?"
+  talk libra idle "Ahora nos toca seguir queriéndonos como el primer día para poder iluminar los amores de otros jóvenes enamorados"
+  talk astrea idle "Creo que nada me gustaría más que seguir en esta eternidad contigo, Libra"
+
+  set_screen "negro" 0 fade 2000

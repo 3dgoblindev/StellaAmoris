@@ -1,0 +1,12 @@
+main:
+  set_screen "stars" 
+  talk astrea idle "¿Has visto, amor?"
+  talk libra idle "¿El qué?"
+  talk astrea idle "El cielo"
+  talk libra idle "Nosotros somos el cielo, Astrea"
+  talk astrea idle "Lo sé, lo sé. Pero… ¡Fíjate mejor!. Está igual que aquel día"
+  talk libra idle "Ah, qué buenos tiempos aquellos. Me acuerdo como si hubiese sido ayer…"
+
+  wait 1000
+  
+  jump cap1_inicio

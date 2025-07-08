@@ -1,0 +1,47 @@
+screens:
+  default:
+    background: img/backgrounds/curtain.webp
+  game:
+    background: img/backgrounds/map.webp
+  blanco:
+    background: img/backgrounds/blanco.png
+  negro:
+    background: img/backgrounds/negro.png
+  stars:
+    background: img/backgrounds/stars.webp
+  edad_media_noche:
+    background: img/backgrounds/1-noche-con.png
+  edad_media_tarde:
+    background: img/backgrounds/1-tarde-con.png
+  edad_media_tarde_sin:
+    background: img/backgrounds/1-tarde.png
+  edad_media_dia:
+    background: img/backgrounds/1-dia.png
+  edad_media_dia_sin:
+    background: img/backgrounds/1-dia-sin.png
+  moderno_dia:
+    background: img/backgrounds/2-dia.png
+  moderno_tarde:
+    background: img/backgrounds/2-tarde.png
+  moderno_noche:
+    background: img/backgrounds/2-noche.png 
+  guerra_dia:
+    background: img/backgrounds/3-dia.png
+  guerra_tarde:
+    background: img/backgrounds/3-tarde.png
+  guerra_noche:
+    background: img/backgrounds/3-noche.png
+  2010_dia:
+    background: img/backgrounds/4-dia.png
+  2010_tarde:
+    background: img/backgrounds/4-tarde.png
+  2010_noche:
+    background: img/backgrounds/4-noche.png 
+  futuro_dia:
+    background: img/backgrounds/5-dia.png
+  futuro_tarde:
+    background: img/backgrounds/5-tarde.png
+  futuro_noche:
+    background: img/backgrounds/5-noche.png
+  futuro_noche_sin:
+    background: img/backgrounds/5-noche-sin.png 

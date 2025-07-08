@@ -1,0 +1,246 @@
+cap3:
+  clear_dialog
+  play music cap3
+
+  set_screen "guerra_dia" 0 fade 2000
+  change_player_character luisa
+  talk luisa idle "Pensaba que no vendrías"
+  talk alberto idle "¿Qué te hacía pensar eso?"
+
+  choice:
+    talk luisa idle "¿No te enteraste de lo de ayer?"
+    "¿Está bien tu familia?":
+      jump cap3_familia
+    "¿He hecho algo? ¿Estás enfadada?":
+      jump cap3_enfadada
+
+cap3_familia:
+  talk luisa idle "Sí, sí, ellos sí. Unos amigos de mi padre están ocultando a mi hermano"
+  talk alberto idle "Menos mal. ¿Dónde? ¿Se puede saber?"
+  talk luisa idle "No lo sé, por el norte, por Cataluña, creo"
+  jump cap3_continua
+
+cap3_enfadada:
+  talk luisa idle "¿Qué? No. ¿Has hecho algo por lo que debiese estar enfadada?"
+  talk alberto idle "Eh… No creo, pero por si acaso, pregunto. Digo, a lo mejor te enfadó que estuviese con tu hermano la semana pasada de copas"
+  talk luisa idle "No, no. Eso sí, ten cuidado. Mi hermano ha marchado al norte"
+  talk alberto idle "¿Y eso?"
+  talk luisa idle "A esconderse. A Cataluña, creo. Con tantos rumores…"
+  jump cap3_continua
+
+cap3_continua:
+  play music carmela
+  talk alberto idle "Ah, bien. Allí estará seguro. ¿Y su novia? Estaban para casar él y la Carmela"
+  talk luisa idle "Lo retrasarán hasta el final de la guerra. Ella ha estado hoy en mi casa. No dejaba de llorar, la pobre"
+  talk alberto idle "Qué lástima…"
+  talk alberto idle "¿Pero a qué te referías antes?"
+  talk luisa idle "A Lorca"
+  talk alberto idle "¿A Lorca? ¿Federico?"
+  talk luisa idle "El mismo. Lo sacaron en un paseíllo y… ya sabes" //
+  talk alberto idle "¿Y cómo es que nadie me ha avisado? Ni una carta ni nada…"
+  talk luisa idle "Yo me enteré esta mañana. Pensé en escribir algo, pero mi padre me lo prohibió. Ya estamos lo suficientemente señalados"
+  talk alberto idle "Tiene razón, pero…"
+  talk luisa idle "Tú tampoco deberías, escritorzuelo de tres al cuarto. Lo que me faltaba ya, Dios mío, mi hermano en el norte y tú bajo metralla…"
+  talk alberto idle "Hala, hala. No digas eso, agorera. No escribiré entonces, aunque me queme por dentro"
+  talk luisa idle "Gracias. Me quedaré más tranquila"
+  talk alberto idle "Con suerte, esta locura terminará pronto"
+  talk luisa idle "Eso espero…"
+  talk alberto idle "Qué te pasa por la cabeza, di"
+  talk luisa idle "Mis padres están hablando de marchar a Madrid"
+  talk alberto idle "Oh…"
+  talk luisa idle "Yo les he dicho que teniéndote aquí…"
+  talk alberto idle "Luisa, aquello es mucho más seguro. Si el ejército continúa, será cuestión de tiempo que lleguen hasta aquí"
+  talk luisa idle "Pero, ¿y tú?"
+  talk alberto idle "Yo…"
+  talk luisa idle "¡Di!"
+  talk alberto idle "Si avanzan, quizás vaya al frente"
+  animate #narrat-app narrat-screenshake
+  talk luisa idle "¿QUÉ?"
+  talk alberto idle "Bueno, bueno, no chilles, mujer…"
+  talk luisa idle "Te digo que no escribas para que no te metan un tiro entre ceja y ceja y me dices que a lo mejor te vas al frente. Te lo juro, Alberto, estás loco"
+  talk alberto idle "Pero que no es seguro…"
+  talk luisa idle "Igualmente es una locura, por Dios. ¡Piensa en tu madre y en mí!"
+  talk alberto idle "Si lo pienso, lo juro"
+  talk luisa idle "Se nota, sí"
+  talk alberto idle "No me pongas esa cara, anda. Venga, vámonos. Te invito a comer a casa, que seguro que a mis padres les hace ilusión"
+
+  choice:
+    " "
+    "Bueno, vale, a ver si con ellos te convenzo de que te quites de locuras":
+      jump cap3_silencio
+    "No, prefiero irme a mi casa. Adiós, anda.":
+      jump cap3_silencio
+
+cap3_silencio:  
+  clear_dialog
+  set_screen "guerra_tarde" 0 fade 2000
+  "Ningún amante se resguarda del Sol bajo las ramas de aquel árbol. El silencio reina en la colina. El bando sublevado hace semanas que está en la localidad. Es difícil contar los kilómetros que separan a Luisa y a Alberto."
+  clear_dialog
+  jump cap3_cartas
+
+cap3_cartas:
+  choice:
+    " "
+    "Abrir carta":
+      jump 23_abril:
+
+23_abril:
+  "23 de abril de 1937"
+
+  "A mi Luisa, "
+  "¿Cómo están tus padres? Espero que Madrid os trate bien."
+  "Aquí está siendo complicado. Heridos por todos lados. ¡Pero no te preocupes! Tu Alberto está sano y salvo. No te vas a quedar sin novio tan fácilmente. Mi único consuelo ahora mismo es que cada noche miro las estrellas y me recuerdan que, posiblemente, tú estés viendo las mismas. Prefiero su brillo al de las balas, pero eso creo que todo el mundo. " 
+  "He visto el periódico y se me ha iluminado la cara al ver tu nombre en él. La periodista que se iba a mantener en perfil bajo, eh. Si es que… Esa es la Luisa de la que me enamoré."
+  "Yo también estoy escribiendo de vuelta, pero no creo que publique nada."
+  "No tengo mucho tiempo, así que te despido ya, pero que sepas que siempre te llevo en mi corazón."
+
+  "Un beso,"
+  "tu Alberto"
+
+  "PD: ¡Un compañero ha encontrado una guitarra! Ahora sí que voy a ser el más insoportable de aquí."
+
+  choice:
+    " "
+    "Cerrar carta.":
+      jump 9_julio
+
+9_julio:      
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "guerra_tarde" 0 fade 1000
+
+  choice:
+    " "
+    "Escribir carta.":
+      jump 9_julio_escribir
+
+9_julio_escribir:
+  clear_dialog
+  "A mi Alberto:"
+  "Espero que mi carta te encuentre bien. En las del mes pasado se te leía… Alterado. La guerra no va muy bien, lo sé. Pero confío en que se logrará. ¡Tenemos una boda que preparar! Dos, de hecho, que mi hermano también tiene que casarse. Te parecerá bonito, que nos ha dicho que se ha ido al frente él también para combatir contigo. Vaya dos."
+
+  "Te echo de menos. ¿Tú crees que nuestro monte y nuestro árbol también lo harán? Las estrellas serán las mismas, pero no se ven igual si no son allí y contigo."
+
+  "Un beso,"
+  "tu Luisa"
+
+  choice:
+    " "
+    "Enviar carta.":
+      jump 30_mayo
+
+30_mayo:
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "guerra_tarde" 0 fade 1000
+
+  choice:
+    " "
+    "Abrir carta.":
+      jump 30_mayo_abrir
+
+
+30_mayo_abrir:
+  clear_dialog
+  "30 de mayo de 1938"
+
+  "A mi Luisa:"
+  "No dejo de pensar en ti y en nuestro árbol. Si cuando vuelva ya no está, creo que moriré de pena. ¿Y tú? ¿Estarás? Espero que sí, porque no sabes cuánto ansío verte. ¿Cómo estás, Luisa? Si me dices que echándome de menos, no te mentiré, me alegrarás el corazón."
+  
+  "Están diciendo que vamos a ir pronto para el norte, de nuevo. Tarragona, creo. La guerra que se libre en el Ebro puede ser decisiva. ¡Si la ganamos tendremos una oportunidad de vencer y de que termine todo! Ojalá se logre."
+  
+  "Tengo a tu hermano roncándome al lado, pero sé que si estuviese despierto me diría que te mandase saludos para ti y para tus padres. Ay, esa Encarni, que se me cuide mucho."
+  "Volviendo a lo de tu hermano, ¿sabías que me ha pedido que le haga una canción para su Carmela? A ver si puedo ponerme pronto. Ya tengo un par de ideas. Yo creo que te gustaría."
+  
+  "Un beso,"
+  "tu Alberto"
+  choice:
+    " "
+    "Cerrar carta.":
+      jump 19_septiembre
+
+19_septiembre:
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "guerra_tarde" 0 fade 1000
+  choice:
+    " "
+    "Escribir carta.":
+      jump 19_septiembre_escribir
+
+19_septiembre_escribir:
+  clear_dialog
+  "19 de septiembre de 1938"
+  ""
+  "A mi Alberto:"
+  "Por favor, si te llegan mis cartas, hazme saber que estás bien. Solo necesito eso. Una señal, algo. Por favor."
+  ""
+  "Ya ni miro las estrellas, solo alzo mi vista la Luna para pedirle que te guíe hacia mí."
+  ""
+  "Un beso,"
+  "tu Luisa, que muere por saber de ti"
+  choice:
+    " "
+    "Enviar carta.":
+      jump 12_agosto
+
+12_agosto:
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "guerra_noche" 0 fade 1000
+  //"El silencio nocturno es quebrantado por el llanto de una dama. Sostiene una carta con el sello roto con manos temblorosas."
+  "El silencio nocturno es quebrantado por tu llanto. Sostienes una carta con el sello roto con manos temblorosas."
+  choice:
+    " "
+    "Abrir carta.":
+      jump 12_agosto_leer
+
+12_agosto_leer:
+  clear_dialog
+  "12 de agosto de 1938"
+  ""
+  "A mi querida hermana:"
+  "Luisa, no te escribo con buenas nuevas, pero eso creo que ya lo sabes. Antes de nada, dile a padre y madre que estoy vivo, no bien, pero vivo, que ya es mucho. Hemos perdido. Ya no hay vuelta atrás. En cuanto pueda volver a andar, volveré a casa y nos iremos los cinco. Dicen que en México acogen a los refugiados. Pide un deseo ahora que hay estrellas fugaces para que podamos irnos pronto."
+  ""
+  "No te haré esperar más. Los dos sabemos a qué viene esta carta. Lo siento, no pude salvarlo. Si hubiese podido, lo hubiese hecho, créeme. Espero que, al menos, te consuele saber que estuviste en sus pensamientos hasta el último momento. Te envío en el sobre una cinta que grabamos pocas semanas antes de la dichosa batalla. Somos muchos los que cantamos, pero quiero que sepas que él lo hacía mirando tus cartas y tu foto."
+  ""
+  "Un abrazo,"
+  "tu hermano que quisiera consolarte entre sus brazos"
+
+  choice:
+    " "
+    "Cerrar carta.":
+      jump grabadora
+
+grabadora:
+  clear_dialog
+  set_screen "negro" 0 fade 1000
+  set_screen "estrallas" 0 fade 1000
+  //poner cancion 
+  //poner imagen
+  "El ejército del Ebro rumbala rumbala rum-ba-la"
+  "El ejército del Ebro rumbala rumbala rum-ba-la"
+
+  "Una noche el río pasó ¡ay Carmela! ¡ay Carmela!"
+  "Una noche el río pasó ¡ay Carmela! ¡ay Carmela!"
+
+  "Pero nada pueden bombas rumbala rumbala rum-ba-la"
+  "Pero nada pueden bombas rumbala rumbala rum-ba-la"
+
+  "Donde sobra corazón ¡ay Carmela! ¡ay Carmela!"
+  "Donde sobra corazón ¡ay Carmela! ¡ay Carmela!"
+
+  "Contraataques muy rabiosos rumbala rumbala rum-ba-la"
+  "Contraataques muy rabiosos rumbala rumbala rum-ba-la"
+
+  "Deberemos resistir ¡ay Carmela! ¡ay Carmela!"
+  "Deberemos resistir ¡ay Carmela! ¡ay Carmela!"
+
+  "Pero igual que combatimos rumbala rumbala rum-ba-la"
+  "Pero igual que combatimos rumbala rumbala rum-ba-la"
+
+  "Prometemos resistir ¡ay Carmela! ¡ay Carmela!"
+  "Prometemos resistir ¡ay Carmela! ¡ay Carmela"
+  set_screen "negro" 0 fade 1000
+  
+  jump cap4_inicio
