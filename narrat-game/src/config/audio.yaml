@@ -1,4 +1,7 @@
 files: 
+  intro:
+    loop: true
+    src: music/intro.mp3
   cap1:
     loop: true
     src: music/cap1.mp3

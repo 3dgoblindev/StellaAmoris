@@ -45,8 +45,6 @@ emperatriz:
   talk alba idle "¿3 días seguidos?"
   talk laura idle "Y el lunes se me olvidó ir"
   talk alba idle "Por Skrillex bendito…"
-  talk laura idle "Bueno, pero no es para tanto. Ya me saldrá otra cosa"
-  talk alba idle "Estoy saliendo con una nini… Laura, espabila"
 
   choice:
     talk laura idle "Bueno, pero no es para tanto. Ya me saldrá otra cosa"
@@ -116,6 +114,7 @@ cerrar_pt:
   talk alba idle "Perfecto. Ahora coloco estas tres cartas bocabajo y…"
 
   choice:
+    " "
     "*Elegir la de la izquierda*":
       jump cap4_carta_enamorados
     "*Elegir la del medio*":
@@ -137,7 +136,7 @@ cap4_carta_enamorados:
 cap4_carta_muerte:
   "Una calavera te devuelve la mirada. La carta de la muerte te observa."
   talk laura idle "¡Skinny legend!"
-  talk alba idle "Laura por dios"
+  talk alba idle "Laura por Dios"
   talk laura idle "Perdón, este tío feo quién es"
   talk alba idle "La muerte"
   talk laura idle "¡Soy muy guapa para morir!"
@@ -162,7 +161,7 @@ cap4_carta_mago:
   
 cap4_estrellas:
   talk laura idle "Hala, Alba, se nos ha hecho de noche. ¿Nos quedamos un ratito y miramos las estrellas?"
-  "Asientes y las os recostáis en el césped. Las estrellas parecen brillar para vosotras."
+  "Asientes y las dos recostáis en el césped. Las estrellas parecen brillar para vosotras."
   "Laura saca su teléfono móvil."
   talk laura idle "Mira, amor, nosotras"
   "Laura te enseña un meme de dos aliens chiquitos mirando las estrellas en una colina."

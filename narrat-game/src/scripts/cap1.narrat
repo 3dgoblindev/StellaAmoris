@@ -61,7 +61,7 @@ cap1_demonio:
     "¿Te lo han des-condado del salario?":
       talk marax idle "Mira, mi psicólogo dice que no hace falta remover tanto la mierda"
 
-  talk marax idle "Pero bueno, ¿me vais a decir vuestros nombres? ¿O vais a seguir siendo Cateto 1 y Cateta 2?"
+  talk marax idle "Pero, bueno, ¿me vais a decir vuestros nombres? ¿O vais a seguir siendo Cateto 1 y Cateta 2?"
   talk aurora idle "¿Usurpar nuestras ánimas vas si decirte nomres nostros?"
   talk marax idle "Si te digo que no, ¿me creerías?"
   talk aurora idle "Sí"
@@ -129,9 +129,10 @@ cap1_demonio2:
 
   clear_dialog
   set_screen "blanco" 0 fade 500
-    set_screen "negro" 0 fade 1000
-  talk lazaro idle "Lázaro: Que nuestro amor sea tan eterno como las estrellas"
+  set_screen "negro" 0 fade 1000
+  talk lazaro idle "¿Que nuestro amor sea tan eterno como las estrellas"
   talk marax idle "Un amor eterno, ¿eh? Concedido. Una pena que vuestros cuerpos no lo sean"
+  clear_dialog
   set_screen "stars" 0 fade 2000
   wait 3000
 

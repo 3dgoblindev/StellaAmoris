@@ -40,7 +40,7 @@ Franceses:
   jump cap2_pienso
 
 cap2_pienso:
-  talk alonso idle "«Pienso, luego existo». ¿Eso decía, no?"
+  talk luciano idle "«Pienso, luego existo». ¿Eso decía, no?"
   talk luciano idle "Qué bien te lo sabes, Alonso. ¿Lo has leído?"
   talk alonso idle "Algo ha llegado a mis manos, sí. No está mal. Aunque la teoría del diablillo malvado…"
   talk luciano idle "¿Hombre de fe que no cree en diablos?"
@@ -159,13 +159,14 @@ cap2_noche2:
   talk luciano idle "…"
   talk luciano idle "Los jacintos"
   talk alonso idle "¿Eh?"
-  talk luciano idle "Que mi flor favorita son los jacintos"
+  talk luciano idle "Que mis flores favoritas son los jacintos"
   talk alonso idle "Ah… Me aseguraré entonces de plantar jacintos para que florezcan cuando vuelvas, no te preocupes"
 
   clear_dialog
   set_screen "negro" 0 fade 2000
   "Años después, el abad Luciano de Tormes falleció de altas fiebres. El prior Alonso de la Vega lo siguió pocos meses después. Algunos dicen que murió de pena. Ambos fueron enterrados en el mismo nicho y los jacintos crecieron sobre la tierra que les daba descanso."
   "Los historiadores dijeron que eran muy buenos amigos."
+  clear_dialog
   set_screen "stars" 0 fade 2000
   wait 3000
   

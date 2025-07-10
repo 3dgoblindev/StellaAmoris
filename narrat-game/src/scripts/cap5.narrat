@@ -92,7 +92,7 @@ cap5_despedida:
   set_screen "negro" 0 fade 1000
   set_screen "futuro_noche" 0 fade 1000
 
-  talk litio idle "¡Agáchate, agáchate vaya que nos alcancen y nos vean!"
+  talk litio idle "¡Agáchate, agáchate, vaya que nos alcancen y nos vean!"
   talk aluminea idle "¡Hago lo que puedo!"
   talk litio idle "A quién se le ocurre no echar el suficiente magnesio al motor de la nave…"
   talk aluminea idle "¡A quién se le ocurre escaparse el día de su boda sin avisar!"

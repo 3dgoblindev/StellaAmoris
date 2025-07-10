@@ -22,7 +22,7 @@ cap3_familia:
 
 cap3_enfadada:
   talk luisa idle "¿Qué? No. ¿Has hecho algo por lo que debiese estar enfadada?"
-  talk alberto idle "Eh… No creo, pero por si acaso, pregunto. Digo, a lo mejor te enfadó que estuviese con tu hermano la semana pasada de copas"
+  talk alberto idle "Eh… No creo, pero, por si acaso, pregunto. Digo, a lo mejor te enfadó que estuviese con tu hermano la semana pasada de copas"
   talk luisa idle "No, no. Eso sí, ten cuidado. Mi hermano ha marchado al norte"
   talk alberto idle "¿Y eso?"
   talk luisa idle "A esconderse. A Cataluña, creo. Con tantos rumores…"
@@ -115,6 +115,7 @@ cap3_cartas:
 
 9_julio_escribir:
   clear_dialog
+  "9 de julio de 1937"
   "A mi Alberto:"
   "Espero que mi carta te encuentre bien. En las del mes pasado se te leía… Alterado. La guerra no va muy bien, lo sé. Pero confío en que se logrará. ¡Tenemos una boda que preparar! Dos, de hecho, que mi hermano también tiene que casarse. Te parecerá bonito, que nos ha dicho que se ha ido al frente él también para combatir contigo. Vaya dos."
 
@@ -204,7 +205,7 @@ cap3_cartas:
   "No te haré esperar más. Los dos sabemos a qué viene esta carta. Lo siento, no pude salvarlo. Si hubiese podido, lo hubiese hecho, créeme. Espero que, al menos, te consuele saber que estuviste en sus pensamientos hasta el último momento. Te envío en el sobre una cinta que grabamos pocas semanas antes de la dichosa batalla. Somos muchos los que cantamos, pero quiero que sepas que él lo hacía mirando tus cartas y tu foto."
   ""
   "Un abrazo,"
-  "tu hermano que quisiera consolarte entre sus brazos"
+  "tu hermano, que quisiera consolarte entre sus brazos"
 
   choice:
     " "
@@ -223,26 +224,26 @@ grabadora:
   "El ejército del Ebro rumbala rumbala rum-ba-la"
   "El ejército del Ebro rumbala rumbala rum-ba-la"
 
-  "Una noche el río pasó ¡ay Carmela! ¡ay Carmela!"
-  "Una noche el río pasó ¡ay Carmela! ¡ay Carmela!"
+  "Una noche el río pasó ¡ay, Carmela! ¡ay, Carmela!"
+  "Una noche el río pasó ¡ay, Carmela! ¡ay, Carmela!"
 
   "Pero nada pueden bombas rumbala rumbala rum-ba-la"
   "Pero nada pueden bombas rumbala rumbala rum-ba-la"
 
-  "Donde sobra corazón ¡ay Carmela! ¡ay Carmela!"
-  "Donde sobra corazón ¡ay Carmela! ¡ay Carmela!"
+  "Donde sobra corazón ¡ay, Carmela! ¡ay, Carmela!"
+  "Donde sobra corazón ¡ay, Carmela! ¡ay, Carmela!"
 
   "Contraataques muy rabiosos rumbala rumbala rum-ba-la"
   "Contraataques muy rabiosos rumbala rumbala rum-ba-la"
 
-  "Deberemos resistir ¡ay Carmela! ¡ay Carmela!"
-  "Deberemos resistir ¡ay Carmela! ¡ay Carmela!"
+  "Deberemos resistir ¡ay, Carmela! ¡ay, Carmela!"
+  "Deberemos resistir ¡ay, Carmela! ¡ay, Carmela!"
 
   "Pero igual que combatimos rumbala rumbala rum-ba-la"
   "Pero igual que combatimos rumbala rumbala rum-ba-la"
 
-  "Prometemos resistir ¡ay Carmela! ¡ay Carmela!"
-  "Prometemos resistir ¡ay Carmela! ¡ay Carmela"
+  "Prometemos resistir ¡ay, Carmela! ¡ay, Carmela!"
+  "Prometemos resistir ¡ay, Carmela! ¡ay, Carmela"
   set_screen "negro" 0 fade 1000
   
   jump cap4_inicio

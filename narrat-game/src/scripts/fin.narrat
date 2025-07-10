@@ -1,5 +1,7 @@
 fin:
   clear_dialog
+  play music intro
+
   set_screen "stars" 0 fade 2000
   change_player_character astrea
 
